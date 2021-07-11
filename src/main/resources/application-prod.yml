@@ -1,0 +1,11 @@
+server:
+  port: { PORT }
+
+spring:
+  datasource:
+    jpa:
+      show-sql: true
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/control?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: admin
