@@ -1,11 +1,11 @@
-package com.controle.ponto.acesso.jornada.service.impl;
+package com.controle.ponto.acesso.jornadatrabalho.service.impl;
 
 import com.controle.ponto.acesso.dto.request.JornadaDTO;
 import com.controle.ponto.acesso.dto.response.MessageResponseDTO;
 import com.controle.ponto.acesso.exception.ControlNotFoundException;
-import com.controle.ponto.acesso.jornada.model.Jornada;
-import com.controle.ponto.acesso.jornada.repository.JornadaRepository;
-import com.controle.ponto.acesso.jornada.service.interfaces.JornadaInterface;
+import com.controle.ponto.acesso.jornadatrabalho.model.JornadaTrabalho;
+import com.controle.ponto.acesso.jornadatrabalho.repository.JornadaRepository;
+import com.controle.ponto.acesso.jornadatrabalho.service.interfaces.JornadaInterface;
 import com.controle.ponto.acesso.mapper.ControlMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,8 +22,8 @@ public class JornadaService implements JornadaInterface {
     private final ControlMapper controlMapper = ControlMapper.INSTANCE;
 
     public MessageResponseDTO createJornada(JornadaDTO jornadaDTO) {
-        Jornada jornada = controlMapper.toJornadaModel(jornadaDTO);
-        this.jornadaRepository.save(jornada);
+        JornadaTrabalho jornadaTrabalho = controlMapper.toJornadaModel(jornadaDTO);
+        this.jornadaRepository.save(jornadaTrabalho);
         return createMessageResponse("Descrção da jornada de trabalho criada com sucesso!");
     }
 
@@ -43,15 +43,15 @@ public class JornadaService implements JornadaInterface {
 
     public JornadaDTO getJornadaById(Long id) {
         validExistId(id);
-        Jornada jornada = this.jornadaRepository.getById(id);
-        return controlMapper.toJornadaDTO(jornada);
+        JornadaTrabalho jornadaTrabalho = this.jornadaRepository.getById(id);
+        return controlMapper.toJornadaDTO(jornadaTrabalho);
     }
 
     public MessageResponseDTO updateJornadaById(Long id, JornadaDTO jornadaDTO) {
         validExistId(id);
-        Jornada jornada = controlMapper.toJornadaModel(jornadaDTO);
-        jornada.setId(id);
-        this.jornadaRepository.save(jornada);
+        JornadaTrabalho jornadaTrabalho = controlMapper.toJornadaModel(jornadaDTO);
+        jornadaTrabalho.setId(id);
+        this.jornadaRepository.save(jornadaTrabalho);
         return createMessageResponse("Descrção da jornada de trabalho atualizada com sucesso! ID: " + id);
     }
 

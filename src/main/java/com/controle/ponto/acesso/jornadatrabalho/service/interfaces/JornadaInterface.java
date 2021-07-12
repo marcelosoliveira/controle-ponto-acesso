@@ -1,4 +1,4 @@
-package com.controle.ponto.acesso.jornada.service.interfaces;
+package com.controle.ponto.acesso.jornadatrabalho.service.interfaces;
 
 public interface JornadaInterface {
 

@@ -1,7 +1,7 @@
 package com.controle.ponto.acesso.mapper;
 
 import com.controle.ponto.acesso.dto.request.JornadaDTO;
-import com.controle.ponto.acesso.jornada.model.Jornada;
+import com.controle.ponto.acesso.jornadatrabalho.model.JornadaTrabalho;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -10,7 +10,7 @@ public interface ControlMapper {
 
     ControlMapper INSTANCE = Mappers.getMapper(ControlMapper.class);
 
-    Jornada toJornadaModel(JornadaDTO jornadaDTO);
+    JornadaTrabalho toJornadaModel(JornadaDTO jornadaDTO);
 
-    JornadaDTO toJornadaDTO(Jornada jornada);
+    JornadaDTO toJornadaDTO(JornadaTrabalho jornadaTrabalho);
 }

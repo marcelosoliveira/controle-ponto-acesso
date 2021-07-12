@@ -1,8 +1,8 @@
-package com.controle.ponto.acesso.jornada.controller;
+package com.controle.ponto.acesso.jornadatrabalho.controller;
 
 import com.controle.ponto.acesso.dto.request.JornadaDTO;
 import com.controle.ponto.acesso.dto.response.MessageResponseDTO;
-import com.controle.ponto.acesso.jornada.service.impl.JornadaService;
+import com.controle.ponto.acesso.jornadatrabalho.service.impl.JornadaService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
