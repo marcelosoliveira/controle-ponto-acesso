@@ -1,5 +1,6 @@
 package com.controle.ponto.acesso.movimentacao.model;
 
+import com.controle.ponto.acesso.bancohora.model.BancoHoras;
 import com.controle.ponto.acesso.calendario.model.Calendario;
 import com.controle.ponto.acesso.ocorrencia.model.Ocorrencia;
 import com.controle.ponto.acesso.usuario.model.Usuario;
@@ -42,7 +43,7 @@ public class Movimentacao {
 
         @OneToMany(mappedBy = "movimentacao", fetch = FetchType.LAZY,
                 cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-        private List<Usuario> bancoHoras;
+        private List<BancoHoras> bancoHoras;
 }
 
 

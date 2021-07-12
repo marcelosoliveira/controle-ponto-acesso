@@ -1,5 +1,6 @@
 package com.controle.ponto.acesso.nivelacesso.model;
 
+import com.controle.ponto.acesso.localidade.model.Localidade;
 import com.controle.ponto.acesso.usuario.model.Usuario;
 import lombok.*;
 
@@ -27,5 +28,5 @@ public class NivelAcesso {
 
     @OneToMany(mappedBy = "nivelAcesso", fetch = FetchType.LAZY,
             cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-    private List<Usuario> localidades;
+    private List<Localidade> localidades;
 }

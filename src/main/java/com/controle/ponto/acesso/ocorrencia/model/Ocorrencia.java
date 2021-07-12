@@ -1,6 +1,6 @@
 package com.controle.ponto.acesso.ocorrencia.model;
 
-import com.controle.ponto.acesso.usuario.model.Usuario;
+import com.controle.ponto.acesso.movimentacao.model.Movimentacao;
 import lombok.*;
 
 import javax.persistence.*;
@@ -25,5 +25,5 @@ public class Ocorrencia {
 
     @OneToMany(mappedBy = "ocorrencia", fetch = FetchType.LAZY,
             cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-    private List<Usuario> movimentacao;
+    private List<Movimentacao> movimentacao;
 }

@@ -3,6 +3,7 @@ package com.controle.ponto.acesso.usuario.model;
 import com.controle.ponto.acesso.categoriausuario.CategoriaUsuario;
 import com.controle.ponto.acesso.empresa.model.Empresa;
 import com.controle.ponto.acesso.jornadatrabalho.model.JornadaTrabalho;
+import com.controle.ponto.acesso.movimentacao.model.Movimentacao;
 import com.controle.ponto.acesso.nivelacesso.model.NivelAcesso;
 import lombok.*;
 
@@ -10,7 +11,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Builder
@@ -49,5 +49,5 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY,
             cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-    private List<Usuario> movimentacao;
+    private List<Movimentacao> movimentacao;
 }

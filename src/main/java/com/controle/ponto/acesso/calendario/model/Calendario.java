@@ -1,6 +1,6 @@
 package com.controle.ponto.acesso.calendario.model;
 
-import com.controle.ponto.acesso.usuario.model.Usuario;
+import com.controle.ponto.acesso.movimentacao.model.Movimentacao;
 import lombok.*;
 
 import javax.persistence.*;
@@ -26,5 +26,5 @@ public class Calendario {
 
     @OneToMany(mappedBy = "calendario", fetch = FetchType.LAZY,
             cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-    private List<Usuario> movimentacao;
+    private List<Movimentacao> movimentacao;
 }
