@@ -2,6 +2,7 @@
 
 * Foi desenvolvido o crud para jornadaTrabalho de trabalho
 * Todas exceções foram tratatdas
-* Documentação em construção!!!
-* Deploy em construção!!!
-* Demais CRUDS em construção!!!
+* Documentação feita com Swagger
+* Relacionamentos entre as entidades
+* Impementado as DTO's para tranferência de dados, utilizando a dependencia map struct
+* Implementado a configuração de banco de dados tanto para desenvolvimento ou produção
